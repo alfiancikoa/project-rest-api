@@ -67,7 +67,7 @@ func ProductFilterController(c echo.Context) error {
 		jsonRespon = "price from " + reqFilter
 	case "new":
 		products, err = databases.GetFilterNewProduct()
-		jsonRespon = "from newest"
+		jsonRespon = "from latest"
 	default:
 		return c.JSON(http.StatusNotFound, respon.StatusSuccessData("data is doesn't exist", nil))
 	}
