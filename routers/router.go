@@ -1,7 +1,7 @@
 package routers
 
 import (
-	"project1/app/controllers"
+	"project1/api/controllers"
 
 	"github.com/labstack/echo/v4"
 )

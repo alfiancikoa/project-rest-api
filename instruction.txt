@@ -1,0 +1,2 @@
+1. docker build -t my-image:latest .
+2. docker run -d -p 8000:8000 --name my-project my-image:latest

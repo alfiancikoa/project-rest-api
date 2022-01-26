@@ -3,7 +3,7 @@ package controllers
 import (
 	"fmt"
 	"net/http"
-	respon "project1/app/common"
+	respon "project1/api/common"
 	"project1/lib/databases"
 	"project1/models"
 	"regexp"
