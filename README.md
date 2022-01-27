@@ -83,7 +83,7 @@ $ go run main.go
 | GET    | /products/filter/:request | Get All Products Filter by | No | No
 
 <br>
-Example in localhost:
+Example in localhost
 <br>
 ```
 localhost:8080/products
@@ -92,7 +92,7 @@ localhost:8080/products/filter/new
 <br>
 # Filter Use
  
-Field the filter to use
+Field the filter to use on :require
 * ascending ( Starting from A )
 * descending ( Starting from Z )
 * lower ( From lower price )
