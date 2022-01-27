@@ -85,11 +85,11 @@ $ go run main.go
 <br>
 Example in localhost
 <br>
-- localhost:8080/products
+- localhost:8080/products <br>
 - localhost:8080/products/filter/new
 <br>
 # Filter Use
- 
+<br>
 Field the filter to use on :require
 * ascending ( Starting from A )
 * descending ( Starting from Z )
