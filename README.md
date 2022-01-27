@@ -87,7 +87,7 @@ Example in localhost
 <br>
 
 ```
-- localhost:8080/products <br>
+- localhost:8080/products
 - localhost:8080/products/filter/new
 ```
 
