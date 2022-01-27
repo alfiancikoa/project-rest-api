@@ -91,7 +91,7 @@ Example in localhost
 
 # Filter Use
 <br>
-<br>
+
 Field the filter to use on :require
 * ascending ( Starting from A )
 * descending ( Starting from Z )
