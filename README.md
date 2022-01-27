@@ -37,6 +37,7 @@ Project API
 <img src="https://github.com/alfiancikoa/project-rest-api/blob/main/img/HLA.jpg">
 
 # How to use
+- For More instructions details klik link <a href="https://github.com/alfiancikoa/project-rest-api/blob/main/instruction.txt">link text</a>
 - Install Go, Postman, MySQL Workbench
 - Create Environment file .env
 ```
@@ -61,17 +62,6 @@ $ go run main.go
 
 <br>
 
-# Filter Use
-
-Field the filter to use
-* Ascending ( Starting from A )
-* Descending ( Starting from Z )
-* Lower ( From lower price )
-* Upper ( From higher price )
-
-<br>
-<br>
-
 
 # Our Feature
 * CREATE: Products
@@ -87,3 +77,15 @@ Field the filter to use
 | POST  | /products | Insert New Products | No | No
 | GET | /products | Get All Products List | No | No
 | GET    | /products/filter/:request | Get All Products Filter by | No | No
+
+<br>
+
+# Filter Use
+
+Field the filter to use
+* Ascending ( Starting from A )
+* Descending ( Starting from Z )
+* Lower ( From lower price )
+* Upper ( From higher price )
+
+<br>
