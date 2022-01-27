@@ -83,9 +83,12 @@ $ go run main.go
 # Filter Use
 
 Field the filter to use
-* Ascending ( Starting from A )
-* Descending ( Starting from Z )
-* Lower ( From lower price )
-* Upper ( From higher price )
+* ascending ( Starting from A )
+* descending ( Starting from Z )
+* lower ( From lower price )
+* upper ( From higher price )
+* new ( Starting from latest Product )
 
+<br>
+<h3>For More instructions details click link <a href="https://github.com/alfiancikoa/project-rest-api/blob/main/instruction.txt">link text</a></h3>
 <br>
