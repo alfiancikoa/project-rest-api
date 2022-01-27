@@ -41,8 +41,12 @@ dan juga dapat dibungkus ke dalam container dengan mengguankn docker</p>
 
 # How to use
 - <h3>For More instructions details click link <a href="https://github.com/alfiancikoa/project-rest-api/blob/main/instruction.txt">link text</a></h3>
-- Install Go, Postman, MySQL Workbench
-- Create Environment file .env
+- Install Go, Postman, MySQL Workbench, Docker
+- Clone this repository in your $PATH:
+```
+https://github.com/alfiancikoa/project-rest-api.git
+```
+- Create Environment file (.env)
 ```
 MYSQL_USER=root
 MYSQL_PASSWORD=password
@@ -51,12 +55,9 @@ MYSQL_PORT=3306
 MYSQL_DBNAME=dbproject
 MYSQL_ROOT_PASSWORD=password
 ```
-- Clone this repository in your $PATH:
-```
-https://github.com/alfiancikoa/project-rest-api.git
-```
-* CREATE DATABASE IF NOT EXISTS `project1`;
-* USE `project1`;
+
+* CREATE DATABASE IF NOT EXISTS `dbproject`;
+* USE `dbproject`;
 * Run `main.go`
 ```
 $ go run main.go
@@ -82,7 +83,12 @@ $ go run main.go
 | GET    | /products/filter/:request | Get All Products Filter by | No | No
 
 <br>
-
+Example in localhost:
+```
+localhost:8080/products
+localhost:8080/products/filter/new
+```
+<br>
 # Filter Use
 
 Field the filter to use
