@@ -18,7 +18,8 @@
 
 # Description
 
-Project Erajaya with a method using GO Language STRUCTURING, ECHO, API. 
+Project Erajaya Basic Rest-API.
+Project API
 
 <br>
 
@@ -32,6 +33,8 @@ Project Erajaya with a method using GO Language STRUCTURING, ECHO, API.
 
 <br>
 
+# High Level Architecture
+<img src="https://github.com/alfiancikoa/project-rest-api/blob/main/img/HLA.jpg">
 
 # How to use
 - Install Go, Postman, MySQL Workbench
