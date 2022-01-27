@@ -85,10 +85,8 @@ $ go run main.go
 <br>
 Example in localhost
 <br>
-```
-localhost:8080/products
-localhost:8080/products/filter/new
-```
+- localhost:8080/products
+- localhost:8080/products/filter/new
 <br>
 # Filter Use
  
