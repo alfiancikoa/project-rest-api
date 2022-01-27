@@ -1,2 +1,43 @@
-1. docker build -t my-image:latest .
-2. docker run -d -p 8000:8000 --name my-project my-image:latest
+----------------------------------------------
+Jika menggunakan localhost
+----------------------------------------------
+1. Create File .env dan Set Environtmen sesuai dengan data mysql local
+    contoh :
+        MYSQL_USER=root
+        MYSQL_PASSWORD=password
+        MYSQL_HOST=localhost
+        MYSQL_PORT=3306
+        MYSQL_DBNAME=db_name
+        MYSQL_ROOT_PASSWORD=password
+2. Buat database di Mysql sesuai keinginan (create database db_name)
+3. go run main.go
+
+----------------------------------------------
+Jika menggunakan Docker
+----------------------------------------------
+----SETUP DOCKER MYSQL----
+--------------------------
+1. Pastikan Docker Image mysql sudah terdownload (docker image pull mysql:latest)
+2. Jalankan Docker Image (docker run --name dockerMySQL -e MYSQL_ROOT_PASSWORD=password -d mysql:latest)
+3. Cek Container apakah sudah berjalan (docker container ls)
+4. Masuk ke container untuk membuat database (docker exec -it dockerMySQL bash)
+5. Login MySQL dengan memasukkan password (mysql -u root -p)
+6. Create Database (create database db_name)
+7. Keluar dari mysql (exit) (exit)
+--------------------------
+----SETUP DOCKER IMAGE----
+--------------------------
+1. Cek host IPAddress Docker Container MySQL (docker inspect -f '{{.Name}} - {{.NetworkSettings.IPAddress }}' $(docker ps -aq))
+2. Contoh Hasil Perintah di atas : /dockerMySQL - 172.17.0.2  -- ini bisa berbeda sesuai dengan container masing2
+3. Setup environtmen password, host, dan nama database
+4. Contoh : MYSQL_PASSWORD=password
+            MYSQL_HOST=172.17.0.2
+            MYSQL_DBNAME=db_name
+5. Build Docker Image (docker build -t nama-image:latest .)
+6. Jalankan Docker Image dengan konfigurasi environtmen 
+(docker run --name nameContainerAPI -p 8080:8080 nama-image:latest)
+7. Program akan otomatis berjalan di atas container
+8. Tekan Ctrl+C jika ingin stop interrupt
+9. Jika ingin menyalakan aplikasi lagi, cukup dengan start nama container
+10. Cek nama container Api (docker container ls -a)
+11. Lakukan start pada container (docker container start nama-container) - menjalankan = start/ berhenti = stop

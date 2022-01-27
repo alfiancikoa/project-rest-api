@@ -2,34 +2,41 @@ package config
 
 import (
 	"fmt"
+	"log"
 	"project1/models"
 
+	"github.com/joho/godotenv"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )
 
 var DB *gorm.DB
 
+func GetConfig() map[string]string {
+	conf, err := godotenv.Read()
+	if err != nil {
+		log.Fatal(err)
+		return nil
+	}
+	return conf
+}
+
 func InitDB() {
-	dbconfig := map[string]string{
-		"DB_USERNAME": "root",
-		"DB_PASSWORD": "",
-		"DB_HOST":     "localhost",
-		"DB_PORT":     "3306",
-		"DB_NAME":     "project1"}
-	// Sesuaikan dengan database kalian
+	dbconfig := GetConfig()
 	connect := fmt.Sprintf("%v:%v@tcp(%v:%v)/%v?charset=utf8&parseTime=True&loc=Local",
-		dbconfig["DB_USERNAME"],
-		dbconfig["DB_PASSWORD"],
-		dbconfig["DB_HOST"],
-		dbconfig["DB_PORT"],
-		dbconfig["DB_NAME"])
+		dbconfig["MYSQL_USER"],
+		dbconfig["MYSQL_PASSWORD"],
+		dbconfig["MYSQL_HOST"],
+		dbconfig["MYSQL_PORT"],
+		dbconfig["MYSQL_DBNAME"])
 
 	// Sesuaikan dengan database kalian
 	var err error
 	DB, err = gorm.Open(mysql.Open(connect), &gorm.Config{})
 	if err != nil {
 		panic(err)
+	} else {
+		fmt.Println("DATABASE is CONNECTED")
 	}
 	InitalMigration()
 }
@@ -42,7 +49,7 @@ func InitalMigration() {
 func InitDBTest() {
 	dbconfig := map[string]string{
 		"DB_USERNAME": "root",
-		"DB_PASSWORD": "",
+		"DB_PASSWORD": "password",
 		"DB_HOST":     "localhost",
 		"DB_PORT":     "3306",
 		"DB_NAME":     "project1_test"}
