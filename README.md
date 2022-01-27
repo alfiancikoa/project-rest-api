@@ -37,7 +37,7 @@ Project API
 <img src="https://github.com/alfiancikoa/project-rest-api/blob/main/img/HLA.jpg">
 
 # How to use
-- For More instructions details klik link <a href="https://github.com/alfiancikoa/project-rest-api/blob/main/instruction.txt">link text</a>
+- <h3>For More instructions details click link <a href="https://github.com/alfiancikoa/project-rest-api/blob/main/instruction.txt">link text</a></h3>
 - Install Go, Postman, MySQL Workbench
 - Create Environment file .env
 ```
