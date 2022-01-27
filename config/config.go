@@ -50,9 +50,9 @@ func InitDBTest() {
 	dbconfig := map[string]string{
 		"DB_USERNAME": "root",
 		"DB_PASSWORD": "password",
-		"DB_HOST":     "localhost",
+		"DB_HOST":     "172.17.0.2",
 		"DB_PORT":     "3306",
-		"DB_NAME":     "project1_test"}
+		"DB_NAME":     "dbproject_test"}
 	// Sesuaikan dengan database kalian
 	connect := fmt.Sprintf("%v:%v@tcp(%v:%v)/%v?charset=utf8&parseTime=True&loc=Local",
 		dbconfig["DB_USERNAME"],

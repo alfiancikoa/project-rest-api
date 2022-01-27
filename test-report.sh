@@ -1,1 +1,1 @@
-go tool cover -html=coverage.out
+go test -v ./api/controllers/... -coverprofile=cover.out && go tool cover -html=cover.out

@@ -41,3 +41,29 @@ Jika menggunakan Docker
 9. Jika ingin menyalakan aplikasi lagi, cukup dengan start nama container
 10. Cek nama container Api (docker container ls -a)
 11. Lakukan start pada container (docker container start nama-container) - menjalankan = start/ berhenti = stop
+
+----------------------------------------------
+Jika ingin Mengetes Unit Testing Coverage
+----------------------------------------------
+------------------------------
+--Jika menggunakan Localhost--
+------------------------------
+1. Masuk ke menu SQL
+2. Create Database untuk testing (create database db_name_test)
+3. Keluar dari menu mysql (exit)
+4. Setting konfigurasi port, host, dan db_name sesuai dengan yang sedang berjalan di dalam file config.go pada InitDBTest()
+5. permission allowed (chmod +x test.sh)
+4. kemudian run script (./test.sh)
+7. Jika ingin melihat report coverage, jalankan script (test-report.sh)
+
+------------------------------
+--Jika menggunakan Docker--
+------------------------------
+1. Masuk ke container untuk membuat database (docker exec -it dockerMySQL bash)
+2. Login MySQL dengan memasukkan password (mysql -u root -p)
+3. Create Database (create database db_name_test)
+4. keluar dari menu mysql (exit)
+5. Setting konfigurasi port, host, dan db_name sesuai dengan yang sedang berjalan di dalam file config.go pada InitDBTest()
+6. permission allowed (chmod +x test.sh)
+7. kemudian run script (./test.sh)
+8. Jika ingin melihat report coverage, jalankan script (test-report.sh)
