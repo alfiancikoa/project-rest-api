@@ -18,8 +18,10 @@
 
 # Description
 
-Project Erajaya Basic Rest-API.
-Project API
+Project Erajaya Basic Rest-API
+<br>
+<p>Project API sederhana dengan menggunakan 2 enpoint untuk menambah dan mengurutkan list product, project ini dapat dijalankan di localhost
+dan juga dapat dibungkus ke dalam container dengan mengguankn docker</p>
 
 <br>
 
