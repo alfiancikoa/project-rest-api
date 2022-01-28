@@ -129,6 +129,7 @@ docker exec -it mysql bash
 <br>
 If you are using docker-desktop, the containers can access host os by using host.docker.internal name.
 Otherwise, you can use default host IP address: 172.17.0.1
+<br>
 ```
 # create and run dockerMySQL container
 docker run -p 3307:3306 -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=dbproject --name dockerContainer -d mysql:latest
