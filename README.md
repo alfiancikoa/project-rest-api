@@ -133,26 +133,31 @@ Otherwise, you can use default host IP address: 172.17.0.1
 docker run -p 3307:3306 -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=dbproject --name dockerContainer -d mysql:latest
 ```
 <br>
+- Make sure your IP Address of Docker Container from dockerMySQL
 
+```
+# make sure the dockerMySQL container is running
+docker container ls
+
+# check ip Address of each container when it is start/run
+docker inspect -f '{{.Name}} - {{.NetworkSettings.IPAddress }}' $(docker ps -aq)
+
+# in this command you will get the ip address from container running
+# example 172.17.0.1 or 172.17.0.2
+# please make sure the ip address from MySQL container
+```
+<br>
 - Set Environtmen on file .env with your configuration
 
 ```
 MYSQL_USER=root           // your user MySQL 
 MYSQL_PASSWORD=password   // make sure this is same with previous command (MYSQL_ROOT_PASSWORD=password)
-MYSQL_HOST=172.17.0.1     // default IP Docker
-MYSQL_PORT=3307           // changing port from 3306 -> 3307
+MYSQL_HOST=172.17.0.1     // default IP Docker || or ip where you have checked in previous command
+MYSQL_PORT=3306           // default port MySQL
 MYSQL_DBNAME=dbproject    // make sure this is same with previous command (MYSQL_DATABASE=dbproject)
 ```
 
 <br>
-
-- Make sure your IP of Docker Container of MySQL
-
-```
-docker inspect -f '{{.Name}} - {{.NetworkSettings.IPAddress }}' $(docker ps -aq)
-```
-<br>
-
 - Build The Image and then Run the Container
 
 ```
@@ -160,7 +165,14 @@ docker inspect -f '{{.Name}} - {{.NetworkSettings.IPAddress }}' $(docker ps -aq)
 docker build -t nama-image:latest .
 
 # create and run appContainer
-docker run --name nameContainerAPI -p 8080:8080 nama-image:latest
+docker run --name nameContainerAPI -e -p 8080:8080 nama-image:latest
+
+# Stop using ctrl+C
+# if you want to run app again
+docker container start nameContainerAPI
+
+# if you want to stop app
+docker container stop nameContainerAPI
 ```
 
 <br>
