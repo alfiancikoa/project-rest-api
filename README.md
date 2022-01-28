@@ -62,12 +62,13 @@ MYSQL_DBNAME=dbproject    // database name
 <br>
 
 - Create Database If Not Exist
-In the Terminal
+<br>
+On the Terminal
 ```
 # login mysql
 $ sudo mysql -u root -p
 
-#in menu mysql
+# on menu mysql
 mysql> create database <db-name>;
 
 # to show all databases list
@@ -76,7 +77,10 @@ mysql> show databases;
 # to exit
 mysql> exit;
 ```
-
+- Running the Program
+```
+$ go run main.go
+```
 # Getting Start With Docker
 
 Common commands
