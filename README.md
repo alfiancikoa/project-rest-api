@@ -138,10 +138,10 @@ docker run -p 3307:3306 -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=dbproj
 
 ```
 MYSQL_USER=root           // your user MySQL 
-MYSQL_PASSWORD=password   // make sure this is same with before command (MYSQL_ROOT_PASSWORD=password)
+MYSQL_PASSWORD=password   // make sure this is same with previous command (MYSQL_ROOT_PASSWORD=password)
 MYSQL_HOST=172.17.0.1     // default IP Docker
 MYSQL_PORT=3307           // changing port from 3306 -> 3307
-MYSQL_DBNAME=dbproject    // make sure this is same with before command (MYSQL_DATABASE=dbproject)
+MYSQL_DBNAME=dbproject    // make sure this is same with previous command (MYSQL_DATABASE=dbproject)
 ```
 
 <br>
