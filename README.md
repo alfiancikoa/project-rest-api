@@ -125,15 +125,17 @@ docker exec -it mysql bash
 <br>
 
 # Using Docker
-<h4>If you are using docker-desktop, the containers can access host os by using host.docker.internal name.
-Otherwise, you can use default host IP address: 172.17.0.1</h4>
+If you are using docker-desktop, the containers can access host os by using host.docker.internal name.
+Otherwise, you can use default host IP address: 172.17.0.1
 <br>
 ```
 # create and run dockerMySQL container
 docker run -p 3307:3306 -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=dbproject --name dockerContainer -d mysql:latest
 ```
 <br>
+
 - Set Environtmen on file .env with your configuration
+
 ```
 MYSQL_USER=root           // your user MySQL 
 MYSQL_PASSWORD=password   // make sure this is same with before command (MYSQL_ROOT_PASSWORD=password)
@@ -141,13 +143,18 @@ MYSQL_HOST=172.17.0.1     // default IP Docker
 MYSQL_PORT=3307           // changing port from 3306 -> 3307
 MYSQL_DBNAME=dbproject    // make sure this is same with before command (MYSQL_DATABASE=dbproject)
 ```
+
 <br>
+
 - Make sure your IP of Docker Container of MySQL
+
 ```
 docker inspect -f '{{.Name}} - {{.NetworkSettings.IPAddress }}' $(docker ps -aq)
 ```
 <br>
+
 - Build The Image and then Run the Container
+
 ```
 # Build the image
 docker build -t nama-image:latest .
@@ -155,6 +162,7 @@ docker build -t nama-image:latest .
 # create and run appContainer
 docker run --name nameContainerAPI -p 8080:8080 nama-image:latest
 ```
+
 <br>
 
 * CREATE DATABASE IF NOT EXISTS `dbproject`;
