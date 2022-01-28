@@ -123,7 +123,9 @@ docker exec -it <container-name> <command>
 docker exec -it mysql bash
 ```
 <br>
-<h4>Using Docker</h4>
+
+<h3>Using Docker</h3>
+
 <br>
 If you are using docker-desktop, the containers can access host os by using host.docker.internal name.
 Otherwise, you can use default host IP address: 172.17.0.1
