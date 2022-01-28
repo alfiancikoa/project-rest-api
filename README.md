@@ -124,7 +124,7 @@ docker exec -it mysql bash
 ```
 <br>
 
-<h3>Using Docker</h3>
+# Using Docker
 
 <br>
 If you are using docker-desktop, the containers can access host os by using host.docker.internal name.
