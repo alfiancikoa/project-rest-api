@@ -48,9 +48,11 @@ dan juga dapat dibungkus ke dalam container dengan mengguankn docker</p>
 https://github.com/alfiancikoa/project-rest-api.git
 ```
 <h4>If you using port localhost<h4>
-- Create Environment file (.env) and fill with:
+- Create Environment file (.env) and fill with
+<br>
+  
 ```
-MYSQL_USER=root
+MYSQL_USER=root 
 MYSQL_PASSWORD=password
 MYSQL_HOST=172.17.0.2
 MYSQL_PORT=3306
