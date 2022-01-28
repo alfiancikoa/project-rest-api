@@ -47,7 +47,7 @@ dan juga dapat dibungkus ke dalam container dengan mengguankn docker</p>
 ```
 https://github.com/alfiancikoa/project-rest-api.git
 ```
-<h4>If you are using port your localhost</h4>
+<h4>If you are using port from your localhost</h4>
 
 Create Environment file (.env) and fill with
 <br>
