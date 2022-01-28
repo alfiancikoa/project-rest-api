@@ -49,8 +49,9 @@ https://github.com/alfiancikoa/project-rest-api.git
 ```
 <h4>If you are using port your localhost<h4>
 
-- Create Environment file (.env) and fill with
-<br>  
+Create Environment file (.env) and fill with
+<br>
+  
 ```
 MYSQL_USER=root 
 MYSQL_PASSWORD=password
