@@ -45,11 +45,11 @@ dan juga dapat dibungkus ke dalam container dengan mengguankn docker</p>
 
 - Clone this repository in your $PATH:
 ```
-git clone https://github.com/alfiancikoa/project-rest-api.git
+$ git clone https://github.com/alfiancikoa/project-rest-api.git
 ```
-<h4>If you are using port from your localhost</h4>
+<h3>If you are using port from your localhost</h3>
 
-Create Environment file (.env) and fill with
+- Create Environment file (.env) and fill with
 <br>
   
 ```
@@ -60,6 +60,22 @@ MYSQL_PORT=3306           // default port from MySQL
 MYSQL_DBNAME=dbproject    // database name
 ```
 <br>
+
+- Create Database If Not Exist
+In the Terminal
+```
+# login mysql
+$ sudo mysql -u root -p
+
+#in menu mysql
+mysql> create database <db-name>;
+
+# to show all databases list
+mysql> show databases;
+
+# to exit
+mysql> exit;
+```
 
 # Getting Start With Docker
 
