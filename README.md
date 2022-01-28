@@ -10,6 +10,7 @@
 - [Description](#description)
 - [Requirements](#Requirements)
 - [How to use](#how-to-use)
+- [Start Docker](#Getting-Start-With-Docker)
 - [Our Feature](#Our-Feature)
 - [Endpoints](#endpoints)
 
@@ -40,21 +41,141 @@ dan juga dapat dibungkus ke dalam container dengan mengguankn docker</p>
 <img src="https://github.com/alfiancikoa/project-rest-api/blob/main/img/HLA.jpg">
 
 # How to use
-- <h4>For More instructions details click link <a href="https://github.com/alfiancikoa/project-rest-api/blob/main/instruction.txt">instruction</a></h4>
-- Install Go, Postman, MySQL Workbench, Docker
+<h5>For More instructions details click link <a href="https://github.com/alfiancikoa/project-rest-api/blob/main/instruction.txt">instruction</a></h5>
+
 - Clone this repository in your $PATH:
 ```
-https://github.com/alfiancikoa/project-rest-api.git
+$ git clone https://github.com/alfiancikoa/project-rest-api.git
 ```
-- Create Environment file (.env)
+<h3>If you are using port from your localhost</h3>
+
+- Create Environment file (.env) and fill with
+  
 ```
-MYSQL_USER=root
-MYSQL_PASSWORD=password
-MYSQL_HOST=172.17.0.2
-MYSQL_PORT=3306
-MYSQL_DBNAME=dbproject
-MYSQL_ROOT_PASSWORD=password
+MYSQL_USER=root           // your user MySQL 
+MYSQL_PASSWORD=password   // your password MySQL
+MYSQL_HOST=localhost      // your IP local default localhost
+MYSQL_PORT=3306           // default port from MySQL
+MYSQL_DBNAME=dbproject    // database name
 ```
+
+- Create Database If Not Exist On the Terminal
+
+
+```
+# login mysql
+$ sudo mysql -u root -p
+
+# on menu mysql
+mysql> create database <db-name>;
+
+# to show all databases list
+mysql> show databases;
+
+# to exit
+mysql> exit;
+```
+- Running the Program
+```
+$ go run main.go
+```
+# Getting Start With Docker
+
+Common commands
+```
+# pull image from container registry
+docker pull <image-name>
+
+# login to container registry
+docker login -u <user-name>
+
+# build image
+docker build -t <image-name>[:tag] .
+
+# push image to container registry
+docker push <image-name>
+
+# create and run container
+docker run -p <host-port>:<container-port> -e <env-name>=<env-value> -v <host-volume>:<container-volume> --name <container-name> <image-name>
+
+# run existing container
+docker start <container-name>
+docker container start <container-name>
+
+# stop running container
+docker stop <container-name>
+docker container stop <container-name>
+
+# remove container
+docker rm <container-name>
+docker container rm <container-name>
+
+# show images
+docker image list
+
+# show container
+docker container list
+docker ps
+docker ps -a
+
+# access/run command in a container
+docker exec -it <container-name> <command>
+docker exec -it mysql bash
+```
+<br>
+
+# Using Docker
+If you are using docker-desktop, the containers can access host os by using host.docker.internal name.
+Otherwise, you can use default host IP address: 172.17.0.1
+<br>
+```
+# create and run dockerMySQL container
+docker run -p 3307:3306 -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=dbproject --name dockerContainer -d mysql:latest
+```
+<br>
+- Make sure your IP Address of Docker Container from dockerMySQL
+
+```
+# make sure the dockerMySQL container is running
+docker container ls
+
+# check ip Address of each container when it is start/run
+docker inspect -f '{{.Name}} - {{.NetworkSettings.IPAddress }}' $(docker ps -aq)
+
+# in this command you will get the ip address from container running
+# example 172.17.0.1 or 172.17.0.2
+# please make sure the ip address from MySQL container
+```
+<br>
+- Set Environtmen on file .env with your configuration
+
+```
+MYSQL_USER=root           // your user MySQL 
+MYSQL_PASSWORD=password   // make sure this is same with previous command (MYSQL_ROOT_PASSWORD=password)
+MYSQL_HOST=172.17.0.1     // default IP Docker || or ip where you have checked in previous command
+MYSQL_PORT=3306           // default port MySQL
+MYSQL_DBNAME=dbproject    // make sure this is same with previous command (MYSQL_DATABASE=dbproject)
+```
+
+<br>
+- Build The Image and then Run the Container
+
+```
+# Build the image
+docker build -t nama-image:latest .
+
+# create and run appContainer
+docker run --name nameContainerAPI -e -p 8080:8080 nama-image:latest
+
+# Stop using ctrl+C
+# if you want to run app again
+docker container start nameContainerAPI
+
+# if you want to stop app
+docker container stop nameContainerAPI
+```
+
+<br>
 
 * CREATE DATABASE IF NOT EXISTS `dbproject`;
 * USE `dbproject`;
@@ -63,7 +184,7 @@ MYSQL_ROOT_PASSWORD=password
 $ go run main.go
 ```
 * Open Postman run with your localhost, follow the routes in the Visual Studio Code folder.
-* <h4>more instruction details click link<a href="https://github.com/alfiancikoa/project-rest-api/blob/main/instruction.txt">instruction</a></h4>
+* <h4>more instruction details click link <a href="https://github.com/alfiancikoa/project-rest-api/blob/main/instruction.txt">instruction</a></h4>
 
 <br>
 
