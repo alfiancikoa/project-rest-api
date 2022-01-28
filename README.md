@@ -55,6 +55,51 @@ MYSQL_PORT=3306
 MYSQL_DBNAME=dbproject
 MYSQL_ROOT_PASSWORD=password
 ```
+<br>
+<h3>Getting Start With Docker</h3>
+
+```
+# pull image from container registry
+docker pull <image-name>
+
+# login to container registry
+docker login -u <user-name>
+
+# build image
+docker build -t <image-name>[:tag] .
+
+# push image to container registry
+docker push <image-name>
+
+# create and run container
+docker run -p <host-port>:<container-port> -e <env-name>=<env-value> -v <host-volume>:<container-volume> --name <container-name> <image-name>
+
+# run existing container
+docker start <container-name>
+docker container start <container-name>
+
+# stop running container
+docker stop <container-name>
+docker container stop <container-name>
+
+# remove container
+docker rm <container-name>
+docker container rm <container-name>
+
+# show images
+docker image list
+
+# show container
+docker container list
+docker ps
+docker ps -a
+
+# access/run command in a container
+docker exec -it <container-name> <command>
+docker exec -it mysql bash
+```
+
+<br>
 
 * CREATE DATABASE IF NOT EXISTS `dbproject`;
 * USE `dbproject`;
