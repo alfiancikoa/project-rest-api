@@ -150,11 +150,12 @@ docker inspect -f '{{.Name}} - {{.NetworkSettings.IPAddress }}' $(docker ps -aq)
 - Set Environtmen on file .env with your configuration
 
 ```
-MYSQL_USER=root           // your user MySQL 
-MYSQL_PASSWORD=password   // make sure this is same with previous command (MYSQL_ROOT_PASSWORD=password)
-MYSQL_HOST=172.17.0.1     // default IP Docker || or ip where you have checked in previous command
-MYSQL_PORT=3306           // default port MySQL
-MYSQL_DBNAME=dbproject    // make sure this is same with previous command (MYSQL_DATABASE=dbproject)
+MYSQL_USER=root              // your user MySQL 
+MYSQL_PASSWORD=password      // make sure this is same with previous command (MYSQL_ROOT_PASSWORD=password)
+MYSQL_HOST=172.17.0.1        // default IP Docker || or ip where you have checked in previous command
+MYSQL_PORT=3306              // default port MySQL
+MYSQL_DBNAME=dbproject       // make sure this is same with previous command (MYSQL_DATABASE=dbproject)
+MYSQL_ROOT_PASSWORD=password // password to login on dockerContainer, this is same with previous command when create docker container (MYSQL_ROOT_PASSWORD=password)
 ```
 
 <br>
