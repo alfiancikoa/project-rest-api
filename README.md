@@ -196,19 +196,6 @@ docker container stop nameContainerAPI
 | GET    | /products/filter/:request | Get All Products Filter by | No | No
 
 <br>
-Example in localhost
-<br>
-
-```
-- localhost:8080/products
-- localhost:8080/products/filter/new
-```
-
-<br>
-
-# Filter Use
-<br>
-
 Field the filter to use on :require
 * ascending ( To show product starting from A )
 * descending ( To show product starting from Z )
@@ -216,6 +203,20 @@ Field the filter to use on :require
 * upper ( To show product from higher price )
 * new ( To show product starting from latest Product )
 
+Example Test API in localhost using Postman
+<br>
+
+```
+<method> <endpoint>
+- POST: localhost:8080/products
+- GET: localhost:8080/products
+- GET: localhost:8080/products/filter/new
+```
+
+<br>
+
+# Filter Use
+<br>
 <br>
 <h3>For More instructions details click link <a href="https://github.com/alfiancikoa/project-rest-api/blob/main/instruction.txt">instructions</a></h3>
 <br>
