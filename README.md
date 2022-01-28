@@ -185,7 +185,6 @@ docker container stop nameContainerAPI
 * READ: Products
 
 <br>
-<br>
 
 # Endpoints
 
@@ -217,9 +216,6 @@ Example Test API in localhost using Postman
 - GET: localhost:8080/products/filter/new
 ```
 
-<br>
-<br>
 <h3>For More instructions details click link <a href="https://github.com/alfiancikoa/project-rest-api/blob/main/instruction.txt">instructions</a></h3>
-<br>
 <h4>For Unit Testing Coverage Report <a href="https://github.com/alfiancikoa/project-rest-api/blob/main/img/Coverage%20Report%20-%20.png">coverage</a></h4>
 <br>
