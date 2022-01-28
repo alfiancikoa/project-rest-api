@@ -50,7 +50,6 @@ $ git clone https://github.com/alfiancikoa/project-rest-api.git
 <h3>If you are using port from your localhost</h3>
 
 - Create Environment file (.env) and fill with
-<br>
   
 ```
 MYSQL_USER=root           // your user MySQL 
@@ -59,9 +58,10 @@ MYSQL_HOST=localhost      // your IP local default localhost
 MYSQL_PORT=3306           // default port from MySQL
 MYSQL_DBNAME=dbproject    // database name
 ```
-<br>
 
 - Create Database If Not Exist On the Terminal
+
+
 ```
 # login mysql
 $ sudo mysql -u root -p
