@@ -53,12 +53,16 @@ Create Environment file (.env) and fill with
 <br>
   
 ```
+#your user MySQL
 MYSQL_USER=root 
+#your password MySQL
 MYSQL_PASSWORD=password
-MYSQL_HOST=172.17.0.2
+#your IP local default localhost
+MYSQL_HOST=localhost
+#default port from MySQL
 MYSQL_PORT=3306
+#database name
 MYSQL_DBNAME=dbproject
-MYSQL_ROOT_PASSWORD=password
 ```
 <br>
 
