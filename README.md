@@ -176,19 +176,10 @@ docker container stop nameContainerAPI
 ```
 
 <br>
-
-* CREATE DATABASE IF NOT EXISTS `dbproject`;
-* USE `dbproject`;
-* Run `main.go`
-```
-$ go run main.go
-```
 * Open Postman run with your localhost, follow the routes in the Visual Studio Code folder.
 * <h4>more instruction details click link <a href="https://github.com/alfiancikoa/project-rest-api/blob/main/instruction.txt">instruction</a></h4>
 
 <br>
-
-
 # Our Feature
 * CREATE: Products
 * READ: Products
@@ -219,11 +210,11 @@ Example in localhost
 <br>
 
 Field the filter to use on :require
-* ascending ( Starting from A )
-* descending ( Starting from Z )
-* lower ( From lower price )
-* upper ( From higher price )
-* new ( Starting from latest Product )
+* ascending ( To show product starting from A )
+* descending ( To show product starting from Z )
+* lower ( To show product from lower price )
+* upper ( To show product from higher price )
+* new ( To show product starting from latest Product )
 
 <br>
 <h3>For More instructions details click link <a href="https://github.com/alfiancikoa/project-rest-api/blob/main/instruction.txt">instructions</a></h3>
