@@ -61,9 +61,7 @@ MYSQL_DBNAME=dbproject    // database name
 ```
 <br>
 
-- Create Database If Not Exist
-<br>
-On the Terminal
+- Create Database If Not Exist On the Terminal
 ```
 # login mysql
 $ sudo mysql -u root -p
