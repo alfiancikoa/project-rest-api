@@ -57,8 +57,10 @@ MYSQL_DBNAME=dbproject
 MYSQL_ROOT_PASSWORD=password
 ```
 <br>
+
 # Getting Start With Docker
 
+Common commands
 ```
 # pull image from container registry
 docker pull <image-name>
