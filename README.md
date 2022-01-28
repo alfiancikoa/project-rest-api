@@ -63,7 +63,7 @@ MYSQL_ROOT_PASSWORD=password
 $ go run main.go
 ```
 * Open Postman run with your localhost, follow the routes in the Visual Studio Code folder.
-* <h4>more instruction details click link<a href="https://github.com/alfiancikoa/project-rest-api/blob/main/instruction.txt">instruction</a></h4>
+* <h4>more instruction details click link <a href="https://github.com/alfiancikoa/project-rest-api/blob/main/instruction.txt">instruction</a></h4>
 
 <br>
 
