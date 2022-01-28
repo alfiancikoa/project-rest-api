@@ -40,7 +40,7 @@ dan juga dapat dibungkus ke dalam container dengan mengguankn docker</p>
 <img src="https://github.com/alfiancikoa/project-rest-api/blob/main/img/HLA.jpg">
 
 # How to use
-- <h3>For More instructions details click link <a href="https://github.com/alfiancikoa/project-rest-api/blob/main/instruction.txt">instruction</a></h3>
+- <h4>For More instructions details click link <a href="https://github.com/alfiancikoa/project-rest-api/blob/main/instruction.txt">instruction</a></h4>
 - Install Go, Postman, MySQL Workbench, Docker
 - Clone this repository in your $PATH:
 ```
@@ -63,6 +63,7 @@ MYSQL_ROOT_PASSWORD=password
 $ go run main.go
 ```
 * Open Postman run with your localhost, follow the routes in the Visual Studio Code folder.
+* <h4>more instruction details click link<a href="https://github.com/alfiancikoa/project-rest-api/blob/main/instruction.txt">instruction</a></h4>
 
 <br>
 
