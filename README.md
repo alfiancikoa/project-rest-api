@@ -45,7 +45,7 @@ dan juga dapat dibungkus ke dalam container dengan mengguankn docker</p>
 
 - Clone this repository in your $PATH:
 ```
-https://github.com/alfiancikoa/project-rest-api.git
+git clone https://github.com/alfiancikoa/project-rest-api.git
 ```
 <h4>If you are using port from your localhost</h4>
 
