@@ -41,13 +41,14 @@ dan juga dapat dibungkus ke dalam container dengan mengguankn docker</p>
 <img src="https://github.com/alfiancikoa/project-rest-api/blob/main/img/HLA.jpg">
 
 # How to use
-- <h4>For More instructions details click link <a href="https://github.com/alfiancikoa/project-rest-api/blob/main/instruction.txt">instruction</a></h4>
-- Install Go, Postman, MySQL Workbench, Docker
+<h5>For More instructions details click link <a href="https://github.com/alfiancikoa/project-rest-api/blob/main/instruction.txt">instruction</a></h5>
+
 - Clone this repository in your $PATH:
 ```
 https://github.com/alfiancikoa/project-rest-api.git
 ```
-- Create Environment file (.env)
+<h4>If you using port localhost<h4>
+- Create Environment file (.env) and fill with:
 ```
 MYSQL_USER=root
 MYSQL_PASSWORD=password
@@ -101,8 +102,9 @@ docker ps -a
 docker exec -it <container-name> <command>
 docker exec -it mysql bash
 ```
-
 <br>
+
+
 
 * CREATE DATABASE IF NOT EXISTS `dbproject`;
 * USE `dbproject`;
